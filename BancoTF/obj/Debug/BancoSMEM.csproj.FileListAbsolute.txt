@@ -112,3 +112,13 @@ D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.pdb
 D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe.config
 D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe
 D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.pdb
+C:\GitHub\TF2\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe.config
+C:\GitHub\TF2\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe
+C:\GitHub\TF2\TF_AED\BancoTF\bin\Debug\BancoSMEM.pdb
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.Menu.resources
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.Properties.Resources.resources
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.exe
+C:\GitHub\TF2\TF_AED\BancoTF\obj\Debug\BancoSMEM.pdb

@@ -13,7 +13,7 @@ namespace BancoSMEM
 
     public partial class Menu : Form
     {
-
+		LeitorArquivo leitorArquivo = new LeitorArquivo();
         public bool teste1 = false, teste2 = false, teste3 = false;
         public string dadosCliente, dadosConta, dadosOp;
         public Menu()
@@ -57,6 +57,12 @@ namespace BancoSMEM
             if (teste1 == true && teste2 == true && teste3 == true)
             {
                 btnBuscar.Visible = true;
+				//Cliente
+                leitorArquivo.leClientes(dadosCliente);
+				//Conta                
+            // leitorArquivo.leContas(dadosConta);
+			    //Operacoes
+			// leitorArquivo.leOperacoes(dadosOp);
 
             }
 
@@ -84,9 +90,7 @@ namespace BancoSMEM
         {
             try
             {
-                LeitorArquivo leitorArquivo = new LeitorArquivo();
-                //Cliente
-                leitorArquivo.leClientes(dadosCliente);
+               
                 string cpf = txtBuscarcpf.Text;
 
                 Cliente cliente = leitorArquivo.encontraCliente(Convert.ToInt64(cpf));
@@ -94,9 +98,6 @@ namespace BancoSMEM
                 txtClienteNome.Text = cliente.nome;
                 txtClienteTipo.Text = cliente.GetType().Name;
 
-                //Conta                
-                // leitorArquivo.leContas(dadosConta);
-				// leitorArquivo.leOperacoes(dadosOp);
                 // int conta = int.Parse(txtConta.Text);
 
                 // Conta contas = leitorArquivo.encontraConta(conta);
@@ -168,6 +169,7 @@ namespace BancoSMEM
                 {
                     this.dadosCliente = dialogo.FileName;
                     teste1 = true;
+					btnBuscarCliente.BackColor = Color.LawnGreen; 
 
                 }
 
@@ -198,13 +200,14 @@ namespace BancoSMEM
                 {
                     dadosConta = dialogo.FileName;
                     teste2 = true;
+					btnBuscarConta.BackColor = Color.LawnGreen;
                 }
 
                 if (resposta == DialogResult.Cancel || resposta == DialogResult.Abort)
                 {
                     MessageBox.Show("Insira um arquivo de texto para poder continuar");
 
-                }
+                } 
             }));
 
             threadFix.SetApartmentState(System.Threading.ApartmentState.STA);
@@ -226,6 +229,7 @@ namespace BancoSMEM
                 {
                     dadosOp = dialogo.FileName;
                     teste3 = true;
+					btnBuscarOperacoes.BackColor = Color.LawnGreen; 
 
                 }
 
