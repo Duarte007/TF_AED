@@ -60,9 +60,9 @@ namespace BancoSMEM
 				//Cliente
                 leitorArquivo.leClientes(dadosCliente);
 				//Conta                
-                leitorArquivo.leContas(dadosConta);
+                //eitorArquivo.leContas(dadosConta);
 			    //Operacoes
-			    leitorArquivo.leOperacoes(dadosOp);
+			    //leitorArquivo.leOperacoes(dadosOp);
 
             }
 

@@ -29,7 +29,7 @@ namespace BancoSMEM {
 				if (raizArvore.dado.getID() > novoElemento.dado.getID())
                     raizArvore.esquerda = adicionar(raizArvore.esquerda, novoElemento);
 				else {
-					if (raizArvore.dado.getID() < raizArvore.dado.getID())
+					if (raizArvore.dado.getID() < novoElemento.dado.getID())
                         raizArvore.direita = adicionar(raizArvore.direita, novoElemento);
 					else
 					    return raizArvore;
@@ -84,17 +84,20 @@ namespace BancoSMEM {
 			this.raiz = retirar(this.raiz, idRemover);
 		}
 
-		private Elemento pesquisar(Elemento raizArvore, long id) {
+		private Elemento pesquisar(Elemento raizArvore, long id) 
+		{
 			if (raizArvore == null) 
 			{
 				return raizArvore;
 			}
-			else {
+			else 
+			{
 				if (raizArvore.dado.getID() == id) 
 				{
 					return raizArvore;
 				}
-				else {
+				else 
+				{
 					if (raizArvore.dado.getID() > id)
 					{
 						raizArvore.esquerda = pesquisar(raizArvore.esquerda, id);
