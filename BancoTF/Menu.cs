@@ -75,7 +75,9 @@ namespace BancoSMEM
             gbxCliente.Visible = true;
             gbxContas.Visible = true;
             groupExtrato.Visible = true;
-        }
+			grpOperacao.Visible = true;
+
+		}
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -98,7 +100,6 @@ namespace BancoSMEM
                  txtContaNumero.Text = contas.numero.ToString();
                  txtContaTipo.Text = contas.categoria.GetType().Name;
                  txtContaSaldoInicial.Text = contas.saldo.ToString("c");
-                 txtExtratoExibir.Text = contas.extrato();
 
             } catch (ArgumentNullException err) {
                 MessageBox.Show("Digite o CPF para fazer a pesquisa");
@@ -125,7 +126,7 @@ namespace BancoSMEM
 
         private void Button2_Click_2(object sender, EventArgs e)
         {
-            txtClientecpf.Text = txtClientecpf.Text = txtClienteNome.Text = txtClienteTipo.Text = txtConta.Text = txtContaNumero.Text = txtContaSaldoInicial.Text = txtExtratoExibir.Text = "";  
+            txtClientecpf.Text = txtClientecpf.Text = txtClienteNome.Text = txtClienteTipo.Text = txtConta.Text = txtContaNumero.Text = txtContaSaldoInicial.Text = txtExtratoExibir.Text = txtContaTipo.Text = "";  
         }
 
         private void GbxArquivos_Enter(object sender, EventArgs e)
@@ -133,7 +134,14 @@ namespace BancoSMEM
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+		private void btnMostrarExtrato_Click(object sender, EventArgs e)
+		{
+			int conta = int.Parse(txtConta.Text);
+			Conta contas = leitorArquivo.encontraConta(conta);
+			txtExtratoExibir.Text = contas.extrato();
+		}
+
+		private void button4_Click(object sender, EventArgs e)
         {
             System.Threading.Thread threadFix = new System.Threading.Thread(new System.Threading.ThreadStart(() =>
             {

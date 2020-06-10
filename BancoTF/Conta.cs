@@ -41,7 +41,8 @@ namespace BancoSMEM {
                 .Append("Saldo atual: ").Append(saldo.ToString("c"))
                 .Append(Environment.NewLine);    
             if(this.operacoes.Count > 0) aux.Append("===========Operações===========");
-			foreach (var operacao in operacoes) aux.Append(operacao);
+			foreach (var operacao in operacoes)
+				aux.Append(operacao);
 
 			return aux.ToString();
 		}

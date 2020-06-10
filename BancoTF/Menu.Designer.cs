@@ -35,6 +35,7 @@
 			this.btnBuscar = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.gbxBuscar = new System.Windows.Forms.GroupBox();
+			this.btnMostrarExtrato = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.lblConta = new System.Windows.Forms.Label();
 			this.lblCPF = new System.Windows.Forms.Label();
@@ -63,6 +64,11 @@
 			this.lblTipoC = new System.Windows.Forms.Label();
 			this.lblNumero = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.grpOperacao = new System.Windows.Forms.GroupBox();
+			this.txtDataFin = new System.Windows.Forms.TextBox();
+			this.txtDataIni = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
 			this.groupExtrato = new System.Windows.Forms.GroupBox();
 			this.txtExtratoExibir = new System.Windows.Forms.RichTextBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -72,6 +78,7 @@
 			this.gbxArquivos.SuspendLayout();
 			this.gbxContas.SuspendLayout();
 			this.panel3.SuspendLayout();
+			this.grpOperacao.SuspendLayout();
 			this.groupExtrato.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -188,6 +195,7 @@
 			// 
 			// gbxBuscar
 			// 
+			this.gbxBuscar.Controls.Add(this.btnMostrarExtrato);
 			this.gbxBuscar.Controls.Add(this.button2);
 			this.gbxBuscar.Controls.Add(this.lblConta);
 			this.gbxBuscar.Controls.Add(this.lblCPF);
@@ -199,16 +207,28 @@
 			this.gbxBuscar.Margin = new System.Windows.Forms.Padding(4);
 			this.gbxBuscar.Name = "gbxBuscar";
 			this.gbxBuscar.Padding = new System.Windows.Forms.Padding(4);
-			this.gbxBuscar.Size = new System.Drawing.Size(1081, 127);
+			this.gbxBuscar.Size = new System.Drawing.Size(1081, 105);
 			this.gbxBuscar.TabIndex = 0;
 			this.gbxBuscar.TabStop = false;
 			this.gbxBuscar.Text = "BUSCAR";
 			this.gbxBuscar.Visible = false;
 			// 
+			// btnMostrarExtrato
+			// 
+			this.btnMostrarExtrato.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnMostrarExtrato.Location = new System.Drawing.Point(779, 21);
+			this.btnMostrarExtrato.Margin = new System.Windows.Forms.Padding(4);
+			this.btnMostrarExtrato.Name = "btnMostrarExtrato";
+			this.btnMostrarExtrato.Size = new System.Drawing.Size(167, 34);
+			this.btnMostrarExtrato.TabIndex = 7;
+			this.btnMostrarExtrato.Text = "EXTRATO";
+			this.btnMostrarExtrato.UseVisualStyleBackColor = false;
+			this.btnMostrarExtrato.Click += new System.EventHandler(this.btnMostrarExtrato_Click);
+			// 
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.Coral;
-			this.button2.Location = new System.Drawing.Point(877, 60);
+			this.button2.Location = new System.Drawing.Point(882, 60);
 			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(167, 34);
@@ -277,11 +297,11 @@
 			this.gbxCliente.Controls.Add(this.label1);
 			this.gbxCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.gbxCliente.ForeColor = System.Drawing.SystemColors.Window;
-			this.gbxCliente.Location = new System.Drawing.Point(12, 159);
+			this.gbxCliente.Location = new System.Drawing.Point(12, 110);
 			this.gbxCliente.Margin = new System.Windows.Forms.Padding(4);
 			this.gbxCliente.Name = "gbxCliente";
 			this.gbxCliente.Padding = new System.Windows.Forms.Padding(4);
-			this.gbxCliente.Size = new System.Drawing.Size(435, 194);
+			this.gbxCliente.Size = new System.Drawing.Size(435, 175);
 			this.gbxCliente.TabIndex = 1;
 			this.gbxCliente.TabStop = false;
 			this.gbxCliente.Text = "Dados do Cliente";
@@ -353,7 +373,7 @@
 			this.gbxArquivos.Controls.Add(this.lblBuscarOperacoes);
 			this.gbxArquivos.Controls.Add(this.lblBuscarCliente);
 			this.gbxArquivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.gbxArquivos.Location = new System.Drawing.Point(263, 159);
+			this.gbxArquivos.Location = new System.Drawing.Point(301, 154);
 			this.gbxArquivos.Margin = new System.Windows.Forms.Padding(4);
 			this.gbxArquivos.Name = "gbxArquivos";
 			this.gbxArquivos.Padding = new System.Windows.Forms.Padding(4);
@@ -440,14 +460,14 @@
 			this.gbxContas.Controls.Add(this.lblNumero);
 			this.gbxContas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.gbxContas.ForeColor = System.Drawing.SystemColors.Window;
-			this.gbxContas.Location = new System.Drawing.Point(12, 389);
+			this.gbxContas.Location = new System.Drawing.Point(12, 292);
 			this.gbxContas.Margin = new System.Windows.Forms.Padding(4);
 			this.gbxContas.Name = "gbxContas";
 			this.gbxContas.Padding = new System.Windows.Forms.Padding(4);
-			this.gbxContas.Size = new System.Drawing.Size(435, 208);
+			this.gbxContas.Size = new System.Drawing.Size(435, 177);
 			this.gbxContas.TabIndex = 7;
 			this.gbxContas.TabStop = false;
-			this.gbxContas.Text = "CONTAS";
+			this.gbxContas.Text = "CONTA";
 			this.gbxContas.Visible = false;
 			// 
 			// txtContaSaldoInicial
@@ -510,6 +530,7 @@
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.panel3.Controls.Add(this.grpOperacao);
 			this.panel3.Controls.Add(this.gbxArquivos);
 			this.panel3.Controls.Add(this.groupExtrato);
 			this.panel3.Controls.Add(this.gbxContas);
@@ -521,6 +542,62 @@
 			this.panel3.Size = new System.Drawing.Size(1111, 645);
 			this.panel3.TabIndex = 5;
 			// 
+			// grpOperacao
+			// 
+			this.grpOperacao.Controls.Add(this.txtDataFin);
+			this.grpOperacao.Controls.Add(this.txtDataIni);
+			this.grpOperacao.Controls.Add(this.label5);
+			this.grpOperacao.Controls.Add(this.label6);
+			this.grpOperacao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpOperacao.ForeColor = System.Drawing.SystemColors.Window;
+			this.grpOperacao.Location = new System.Drawing.Point(12, 477);
+			this.grpOperacao.Margin = new System.Windows.Forms.Padding(4);
+			this.grpOperacao.Name = "grpOperacao";
+			this.grpOperacao.Padding = new System.Windows.Forms.Padding(4);
+			this.grpOperacao.Size = new System.Drawing.Size(435, 127);
+			this.grpOperacao.TabIndex = 11;
+			this.grpOperacao.TabStop = false;
+			this.grpOperacao.Text = "Periodo Operação";
+			this.grpOperacao.Visible = false;
+			// 
+			// txtDataFin
+			// 
+			this.txtDataFin.Location = new System.Drawing.Point(157, 80);
+			this.txtDataFin.Margin = new System.Windows.Forms.Padding(4);
+			this.txtDataFin.Name = "txtDataFin";
+			this.txtDataFin.ReadOnly = true;
+			this.txtDataFin.Size = new System.Drawing.Size(244, 30);
+			this.txtDataFin.TabIndex = 5;
+			// 
+			// txtDataIni
+			// 
+			this.txtDataIni.Location = new System.Drawing.Point(157, 37);
+			this.txtDataIni.Margin = new System.Windows.Forms.Padding(4);
+			this.txtDataIni.Name = "txtDataIni";
+			this.txtDataIni.ReadOnly = true;
+			this.txtDataIni.Size = new System.Drawing.Size(244, 30);
+			this.txtDataIni.TabIndex = 4;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(8, 86);
+			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(129, 24);
+			this.label5.TabIndex = 3;
+			this.label5.Text = "DATA FINAL:";
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(8, 43);
+			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(141, 24);
+			this.label6.TabIndex = 0;
+			this.label6.Text = "DATA INICIAL:";
+			// 
 			// groupExtrato
 			// 
 			this.groupExtrato.Controls.Add(this.txtExtratoExibir);
@@ -530,7 +607,7 @@
 			this.groupExtrato.Margin = new System.Windows.Forms.Padding(4);
 			this.groupExtrato.Name = "groupExtrato";
 			this.groupExtrato.Padding = new System.Windows.Forms.Padding(4);
-			this.groupExtrato.Size = new System.Drawing.Size(639, 438);
+			this.groupExtrato.Size = new System.Drawing.Size(639, 444);
 			this.groupExtrato.TabIndex = 9;
 			this.groupExtrato.TabStop = false;
 			this.groupExtrato.Text = "EXTRATO";
@@ -574,6 +651,8 @@
 			this.gbxContas.ResumeLayout(false);
 			this.gbxContas.PerformLayout();
 			this.panel3.ResumeLayout(false);
+			this.grpOperacao.ResumeLayout(false);
+			this.grpOperacao.PerformLayout();
 			this.groupExtrato.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -619,5 +698,11 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.RichTextBox txtExtratoExibir;
         private System.Windows.Forms.Button button2;
-    }
+		private System.Windows.Forms.Button btnMostrarExtrato;
+		private System.Windows.Forms.GroupBox grpOperacao;
+		private System.Windows.Forms.TextBox txtDataFin;
+		private System.Windows.Forms.TextBox txtDataIni;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label6;
+	}
 }
