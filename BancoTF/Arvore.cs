@@ -84,36 +84,23 @@ namespace BancoSMEM {
 			this.raiz = retirar(this.raiz, idRemover);
 		}
 
-		private Elemento pesquisar(Elemento raizArvore, long id) 
-		{
-			if (raizArvore == null) 
-			{
-				return raizArvore;
-			}
-			else 
-			{
-				if (raizArvore.dado.getID() == id) 
-				{
+		private Elemento pesquisar(Elemento raizArvore, long id) {
+			if (raizArvore != null || raizArvore.dado != null) {
+				if (raizArvore.dado.getID() == id) {
 					return raizArvore;
-				}
-				else 
-				{
-					if (raizArvore.dado.getID() > id)
-					{
-						raizArvore.esquerda = pesquisar(raizArvore.esquerda, id);
+				} else {
+					if (raizArvore.dado.getID() > id) {
+						return pesquisar(raizArvore.esquerda, id);
+					} else {
+						return pesquisar(raizArvore.direita, id);
 					}
-					else
-					{
-						raizArvore.direita = pesquisar(raizArvore.direita, id);
-					}
-					return raizArvore;
 				}
 			}
+			return raizArvore;
 		}
 
 		public Elemento encontrar(long id) {
-			this.raiz = pesquisar(this.raiz, id);
-			return this.raiz;
+            return pesquisar(this.raiz, id); 
 		}
 	}
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BancoSMEM {
 
-	public class Conta {
+	public class Conta : IDados{
 		public List<Operacao> operacoes;
 
 		public Conta(Cliente titular, int numero, double saldo, ISacavel categoria) {
@@ -13,11 +13,9 @@ namespace BancoSMEM {
 			this.saldo = saldo;
 			Titular = titular;
 			this.categoria = categoria;
-			proximaConta = this.numero++;
 		}
 
 		public int numero { get; set; }
-		public int proximaConta { get; set; }
 		public double saldo { get; set; }
 		public Cliente Titular { get; set; }
 		public ISacavel categoria { get; }
@@ -42,6 +40,7 @@ namespace BancoSMEM {
                 .Append(Environment.NewLine)
                 .Append("Saldo atual: ").Append(saldo.ToString("c"))
                 .Append(Environment.NewLine);    
+            if(this.operacoes.Count > 0) aux.Append("===========Operações===========");
 			foreach (var operacao in operacoes) aux.Append(operacao);
 
 			return aux.ToString();
@@ -59,6 +58,10 @@ namespace BancoSMEM {
 			}
 
 			return saida;
+		}
+
+		public long getID(){
+			return this.numero;
 		}
 	}
 

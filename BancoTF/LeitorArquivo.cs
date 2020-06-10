@@ -11,15 +11,14 @@ namespace BancoSMEM {
         public string patch1, patch2, patch3;
 	
 
-        public void SetArquivos (string patch01, string patch02, string patch03)
-        {
+        public void SetArquivos (string patch01, string patch02, string patch03) {
             patch1 = patch01;
             patch2 = patch02;
             patch3 = patch03;
         }
 
        
-		public void leClientes(string path1) {
+		public void createCustomer(string path1) {
 			try {
 				string cpf, nome;
 				var linhas = File.ReadAllLines(path1);
@@ -38,17 +37,17 @@ namespace BancoSMEM {
 			}
 		}
 
-		public void leOperacoes(string path2) {
+		public void createOperation(string path2) {
 			try {
 				var linhas = File.ReadAllLines(path2);
 				DateTime data;
 				double valor;
-				int tipo, dia, mes, ano, codOp, conta;
+				int tipo, dia, mes, ano, codOp, numConta;
 				string[] datas;
 				string[] dados;
 				foreach (var line in linhas) {
 					dados = line.Split(';');
-					conta = int.Parse(dados[0]);
+					numConta = int.Parse(dados[0]);
 					codOp = int.Parse(dados[1]);
 					valor = double.Parse(dados[2]);
 					datas = dados[3].Split('/');
@@ -56,11 +55,13 @@ namespace BancoSMEM {
 					mes = int.Parse(datas[1]);
 					ano = int.Parse(datas[2]);
 					data = new DateTime(ano, mes, dia);
-					var operacao = decodificaOp(valor, data, conta, codOp);
-					var conta1 = encontraConta(conta);
-					//var el = new Elemento(conta1);
-					//arvoreConta.inserir(el);
-					if (conta1 != null && operacao != null) conta1.addOperacao(operacao);
+					var operacao = decodificaOp(valor, data, numConta, codOp);
+					var conta = encontraConta(numConta);
+					if (conta != null && operacao != null){
+						conta.addOperacao(operacao);
+						var el = new Elemento(conta);
+						arvoreConta.inserir(el);
+					} 
 				}
 			}
 			catch (IOException) {
@@ -69,7 +70,7 @@ namespace BancoSMEM {
 		}
 
 
-		public void leContas(string path3) {
+		public void createAccount(string path3) {
 			try {
 				var linhas = File.ReadAllLines(path3);
 				string cpfCliente;
@@ -100,7 +101,11 @@ namespace BancoSMEM {
 
 					//contas.Add(conta);
 
-					if (conta != null && cliente != null) cliente.addConta(conta);
+					if (conta != null && cliente != null){
+						cliente.addConta(conta);
+						var el = new Elemento(conta);
+						arvoreConta.inserir(el);
+					}
 				}
 			}
 			catch (IOException) {

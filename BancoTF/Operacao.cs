@@ -22,7 +22,7 @@ namespace BancoSMEM {
 
 		public override string ToString() {
 			var aux = new StringBuilder();
-            aux.Append("Nome da operação: ")
+            aux.Append("Nome da operaÃ§ao: ")
                 .Append(this.GetType().Name)
                 .Append(Environment.NewLine)
                 .Append("Valor: ").Append(valor.ToString("c"))

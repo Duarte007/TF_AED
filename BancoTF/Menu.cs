@@ -47,25 +47,21 @@ namespace BancoSMEM
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        private void button3_Click(object sender, EventArgs e) {
             gbxArquivos.Visible = true;
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (teste1 == true && teste2 == true && teste3 == true)
-            {
+        private void button6_Click(object sender, EventArgs e) {
+            if (teste1 && teste2 && teste3) {
                 btnBuscar.Visible = true;
 				//Cliente
-                leitorArquivo.leClientes(dadosCliente);
+                leitorArquivo.createCustomer(dadosCliente);
 				//Conta                
-                //eitorArquivo.leContas(dadosConta);
+                leitorArquivo.createAccount(dadosConta);
 			    //Operacoes
-			    //leitorArquivo.leOperacoes(dadosOp);
+			    leitorArquivo.createOperation(dadosOp);
 
             }
-
             else
                 MessageBox.Show("Favor inserir todos os arquivos");
 
@@ -86,10 +82,8 @@ namespace BancoSMEM
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void button7_Click(object sender, EventArgs e) {
+            try {
                
                 string cpf = txtBuscarcpf.Text;
 
@@ -105,37 +99,21 @@ namespace BancoSMEM
                  txtContaTipo.Text = contas.categoria.GetType().Name;
                  txtContaSaldoInicial.Text = contas.saldo.ToString("c");
                  txtExtratoExibir.Text = contas.extrato();
-               
 
-
-
-            }
-            catch (ArgumentNullException)
-            {
+            } catch (ArgumentNullException err) {
                 MessageBox.Show("Digite o CPF para fazer a pesquisa");
-            }
-            catch (Exception)
-            {
-
+            } catch (Exception err) {
                 MessageBox.Show("Erro não definido.");
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
+        private void button2_Click_1(object sender, EventArgs e) {
+            try {
                 LeitorArquivo leitorArquivo2 = new LeitorArquivo();
                 int conta = int.Parse(txtConta.Text);
 
                 Conta contas = leitorArquivo2.encontraConta(conta);
-
-
-
-            }
-
-            catch (Exception)
-            {
+            } catch (Exception) {
 
             }
         }
