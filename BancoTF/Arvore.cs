@@ -85,18 +85,24 @@ namespace BancoSMEM {
 		}
 
 		private Elemento pesquisar(Elemento raizArvore, long id) {
-			if (raizArvore == null) {
+			if (raizArvore == null) 
+			{
 				return raizArvore;
 			}
 			else {
-				if (raizArvore.dado.getID() == id) {
+				if (raizArvore.dado.getID() == id) 
+				{
 					return raizArvore;
 				}
 				else {
-					if (raizArvore.dado.getID() == id)
+					if (raizArvore.dado.getID() > id)
+					{
 						raizArvore.esquerda = pesquisar(raizArvore.esquerda, id);
+					}
 					else
+					{
 						raizArvore.direita = pesquisar(raizArvore.direita, id);
+					}
 					return raizArvore;
 				}
 			}

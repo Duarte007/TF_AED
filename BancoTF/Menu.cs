@@ -60,9 +60,9 @@ namespace BancoSMEM
 				//Cliente
                 leitorArquivo.leClientes(dadosCliente);
 				//Conta                
-            // leitorArquivo.leContas(dadosConta);
+                leitorArquivo.leContas(dadosConta);
 			    //Operacoes
-			// leitorArquivo.leOperacoes(dadosOp);
+			    leitorArquivo.leOperacoes(dadosOp);
 
             }
 
@@ -98,13 +98,13 @@ namespace BancoSMEM
                 txtClienteNome.Text = cliente.nome;
                 txtClienteTipo.Text = cliente.GetType().Name;
 
-                // int conta = int.Parse(txtConta.Text);
+                 int conta = int.Parse(txtConta.Text);
 
-                // Conta contas = leitorArquivo.encontraConta(conta);
-                // txtContaNumero.Text = contas.numero.ToString();
-                // txtContaTipo.Text = contas.categoria.GetType().Name;
-                // txtContaSaldoInicial.Text = contas.saldo.ToString("c");
-                // txtExtratoExibir.Text = contas.extrato();
+                 Conta contas = leitorArquivo.encontraConta(conta);
+                 txtContaNumero.Text = contas.numero.ToString();
+                 txtContaTipo.Text = contas.categoria.GetType().Name;
+                 txtContaSaldoInicial.Text = contas.saldo.ToString("c");
+                 txtExtratoExibir.Text = contas.extrato();
                
 
 

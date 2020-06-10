@@ -6,8 +6,8 @@ namespace BancoSMEM {
 
 	public class LeitorArquivo {
 		Arvore arvoreCliente = new Arvore();
-		public List<Conta> contas = new List<Conta>();
-		public List<Operacao> operacoes = new List<Operacao>();
+		Arvore arvoreConta = new Arvore();
+		Arvore arvoreOp = new Arvore();
         public string patch1, patch2, patch3;
 	
 
@@ -58,7 +58,8 @@ namespace BancoSMEM {
 					data = new DateTime(ano, mes, dia);
 					var operacao = decodificaOp(valor, data, conta, codOp);
 					var conta1 = encontraConta(conta);
-					operacoes.Add(operacao);
+					//var el = new Elemento(conta1);
+					//arvoreConta.inserir(el);
 					if (conta1 != null && operacao != null) conta1.addOperacao(operacao);
 				}
 			}
@@ -97,7 +98,7 @@ namespace BancoSMEM {
 							break;
 					}
 
-					contas.Add(conta);
+					//contas.Add(conta);
 
 					if (conta != null && cliente != null) cliente.addConta(conta);
 				}
@@ -113,7 +114,8 @@ namespace BancoSMEM {
 		}
 
 		public Conta encontraConta(int numeroConta) {
-			return contas.Find(conta => conta.numero == numeroConta);
+			//return contas.Find(conta => conta.numero == numeroConta);
+			return (Conta) arvoreConta.encontrar(numeroConta).dado;
 		}
 
 		public Cliente decodificaCliente(int num, string nome, string cpf) {
