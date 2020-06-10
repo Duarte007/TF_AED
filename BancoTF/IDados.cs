@@ -1,5 +1,5 @@
 namespace BancoSMEM {
     public interface IDados{
-        int getID();
+        long getID();
     }
 }

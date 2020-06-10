@@ -6,8 +6,8 @@
 
 		public Elemento(IDados dado){
 			this.dado = dado;
-			this.esquerda=null;
-			this.direita=null;
+			this.esquerda = null;
+			this.direita = null;
 		}
 	}
 }

@@ -15,9 +15,6 @@ namespace BancoSMEM {
 		private static void Main(string[] args) 
         {
 			var leitorArquivo = new LeitorArquivo();
-			var Contas = leitorArquivo.contas;
-			var Clientes = leitorArquivo.clientes;
-			var Operacaos = leitorArquivo.operacoes;
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

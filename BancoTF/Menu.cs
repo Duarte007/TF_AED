@@ -89,21 +89,21 @@ namespace BancoSMEM
                 leitorArquivo.leClientes(dadosCliente);
                 string cpf = txtBuscarcpf.Text;
 
-                Cliente cliente = leitorArquivo.encontraCliente(cpf);
+                Cliente cliente = leitorArquivo.encontraCliente(Convert.ToInt64(cpf));
                 txtClientecpf.Text = cliente.cpf;
                 txtClienteNome.Text = cliente.nome;
                 txtClienteTipo.Text = cliente.GetType().Name;
 
                 //Conta                
-                leitorArquivo.leContas(dadosConta);
-				leitorArquivo.leOperacoes(dadosOp);
-                int conta = int.Parse(txtConta.Text);
+                // leitorArquivo.leContas(dadosConta);
+				// leitorArquivo.leOperacoes(dadosOp);
+                // int conta = int.Parse(txtConta.Text);
 
-                Conta contas = leitorArquivo.encontraConta(conta);
-                txtContaNumero.Text = contas.numero.ToString();
-                txtContaTipo.Text = contas.categoria.GetType().Name;
-                txtContaSaldoInicial.Text = contas.saldo.ToString("c");
-                txtExtratoExibir.Text = contas.extrato();
+                // Conta contas = leitorArquivo.encontraConta(conta);
+                // txtContaNumero.Text = contas.numero.ToString();
+                // txtContaTipo.Text = contas.categoria.GetType().Name;
+                // txtContaSaldoInicial.Text = contas.saldo.ToString("c");
+                // txtExtratoExibir.Text = contas.extrato();
                
 
 

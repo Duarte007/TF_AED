@@ -102,3 +102,13 @@ C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.csproj.GenerateResource.cac
 C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
 C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.exe
 C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.pdb
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.Menu.resources
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.Properties.Resources.resources
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.exe
+D:\Projetos Programação\TF_AED\BancoTF\obj\Debug\BancoSMEM.pdb
+D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe.config
+D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.exe
+D:\Projetos Programação\TF_AED\BancoTF\bin\Debug\BancoSMEM.pdb

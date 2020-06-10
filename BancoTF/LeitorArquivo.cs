@@ -5,7 +5,7 @@ using System.IO;
 namespace BancoSMEM {
 
 	public class LeitorArquivo {
-		ArvoreCliente arvoreCliente = new ArvoreCliente();
+		Arvore arvoreCliente = new Arvore();
 		public List<Conta> contas = new List<Conta>();
 		public List<Operacao> operacoes = new List<Operacao>();
         public string patch1, patch2, patch3;
@@ -28,10 +28,11 @@ namespace BancoSMEM {
 					cpf = dados[0].Replace("-","");
 					nome = dados[1];
 					var cliente = new Premium(nome, cpf);
-					arvoreCliente.inserir(cliente);
+					var el = new Elemento(cliente);
+					arvoreCliente.inserir(el);
 				}
 			}
-			catch (IOException) 
+			catch (IOException err) 
             {
 				Console.WriteLine("Não foi possível ler os Clientes:");
 			}
@@ -40,24 +41,23 @@ namespace BancoSMEM {
 		public void leOperacoes(string path2) {
 			try {
 				var linhas = File.ReadAllLines(path2);
-				string conta;
 				DateTime data;
 				double valor;
-				int tipo, dia, mes, ano;
+				int tipo, dia, mes, ano, codOp, conta;
 				string[] datas;
 				string[] dados;
 				foreach (var line in linhas) {
 					dados = line.Split(';');
-					conta = dados[0];
-					tipo = int.Parse(dados[1]);
+					conta = int.Parse(dados[0]);
+					codOp = int.Parse(dados[1]);
 					valor = double.Parse(dados[2]);
 					datas = dados[3].Split('/');
 					dia = int.Parse(datas[0]);
 					mes = int.Parse(datas[1]);
 					ano = int.Parse(datas[2]);
 					data = new DateTime(ano, mes, dia);
-					var operacao = decodificaOp(tipo, valor, data);
-					var conta1 = encontraConta(int.Parse(conta));
+					var operacao = decodificaOp(valor, data, conta, codOp);
+					var conta1 = encontraConta(conta);
 					operacoes.Add(operacao);
 					if (conta1 != null && operacao != null) conta1.addOperacao(operacao);
 				}
@@ -82,7 +82,7 @@ namespace BancoSMEM {
 					numero = int.Parse(dados[0]);
 					tipo = 2; // int.Parse(dados[1]);
 					cpfCliente = dados[1].Replace("-", "");
-					cliente = encontraCliente(cpfCliente);
+					cliente = encontraCliente(Convert.ToInt64(cpfCliente));
 
 					saldoInicial = double.Parse(dados[2]);
 					switch (tipo) {
@@ -107,9 +107,9 @@ namespace BancoSMEM {
 			}
 		}
 
-		public Cliente encontraCliente(string cpfCliente) {
+		public Cliente encontraCliente(long cpfCliente) {
 			//return clientes.Find(cliente => cliente.cpf == cpfCliente);
-			return arvoreCliente.encontrar(Convert.ToInt64(cpfCliente));
+			return (Cliente) arvoreCliente.encontrar(cpfCliente).dado;
 		}
 
 		public Conta encontraConta(int numeroConta) {
@@ -125,14 +125,14 @@ namespace BancoSMEM {
 			throw new ArgumentException();
 		}
 
-		public Operacao decodificaOp(int num, double valor, DateTime data) {
-			switch (num) {
+		public Operacao decodificaOp(double valor, DateTime data, int numConta, int codOperacao) {
+			switch (codOperacao) {
 				case 1:
-					return new Saque(valor, data);
+					return new Saque(valor, data, numConta, codOperacao);
 				case 0:
-					return new Deposito(valor, data);
+					return new Deposito(valor, data, numConta, codOperacao);
 				case 2:
-					return new Rendimento(valor, data);
+					return new Rendimento(valor, data, numConta, codOperacao);
 			}
 
 			throw new ArgumentException();

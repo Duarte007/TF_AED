@@ -16,9 +16,9 @@ namespace BancoSMEM {
 			proximaConta = this.numero++;
 		}
 
-		public int numero { get; protected set; }
-		public int proximaConta { get; protected set; }
-		public double saldo { get; protected set; }
+		public int numero { get; set; }
+		public int proximaConta { get; set; }
+		public double saldo { get; set; }
 		public Cliente Titular { get; set; }
 		public ISacavel categoria { get; }
 		public Conta direita;

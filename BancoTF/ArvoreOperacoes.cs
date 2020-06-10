@@ -87,7 +87,7 @@ namespace BancoSMEM
 			{
 				/// O antecessor do nó que deverá ser retirado da árvore o substitui.
 				//clienteRetirar.cpf = raizArvore.cpf;
-				operacaoRetirar.numConta = raizArvore.numConta;
+				// operacaoRetirar.numConta = raizArvore.numConta;
 				/// A raiz da árvore é atualizada com os descendentes à esquerda do antecessor.
 				///  Ou  seja,  retira-­‐se  o  antecessor  da  árvore. 
 				return raizArvore.esquerda;

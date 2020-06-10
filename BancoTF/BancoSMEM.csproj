@@ -50,6 +50,9 @@
     <Compile Include="ArvoreOperacoes.cs" />
     <Compile Include="ArvoreConta.cs" />
     <Compile Include="ArvoreCliente.cs" />
+    <Compile Include="Arvore.cs" />
+    <Compile Include="Elemento.cs" />
+    <Compile Include="IDados.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="ContaCorrente.cs" />

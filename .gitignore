@@ -56,7 +56,8 @@
 # *.psess
 # *.vsp
 # *.vspx
-
+.vs
+.vscode
 # # Guidance Automation Toolkit
 # *.gpState
 

@@ -24,13 +24,15 @@ namespace BancoSMEM {
 		}
 
 		private Elemento adicionar(Elemento raizArvore, Elemento novoElemento) {
-			if (raizArvore == null) raizArvore = novoElemento;
+			if (raizArvore == null || raizArvore.dado == null) raizArvore = novoElemento;
 			else {
-				if (Convert.ToInt64(raizArvore.dado.getID()) > Convert.ToInt64(novoElemento.dado.getID())) raizArvore.esquerda = adicionar(raizArvore.esquerda, novoElemento);
+				if (raizArvore.dado.getID() > novoElemento.dado.getID())
+                    raizArvore.esquerda = adicionar(raizArvore.esquerda, novoElemento);
 				else {
-					if (Convert.ToInt64(raizArvore.dado.getID()) < Convert.ToInt64(raizArvore.dado.getID())) raizArvore.direita = adicionar(raizArvore.direita, novoElemento);
+					if (raizArvore.dado.getID() < raizArvore.dado.getID())
+                        raizArvore.direita = adicionar(raizArvore.direita, novoElemento);
 					else
-					return raizArvore;
+					    return raizArvore;
 				}
 			}
 			return raizArvore;
@@ -69,7 +71,7 @@ namespace BancoSMEM {
 					}
 				}
 				else {
-					if (Convert.ToInt64(raizArvore.dado.getID()) > id)
+					if (raizArvore.dado.getID() > id)
 						raizArvore.esquerda = retirar(raizArvore.esquerda, id);
 					else
 						raizArvore.direita = retirar(raizArvore.direita, id);
