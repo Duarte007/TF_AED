@@ -1,0 +1,104 @@
+C:/Users/thale/source/repos/BancoSMEM/bin/Debug/BancoSMEM.exe.config
+C:/Users/thale/source/repos/BancoSMEM/bin/Debug/BancoSMEM.exe
+C:/Users/thale/source/repos/BancoSMEM/bin/Debug/BancoSMEM.pdb
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.csprojAssemblyReference.cache
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.MenuInicial.resources
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.Properties.Resources.resources
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.csproj.GenerateResource.cache
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.exe
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.pdb
+C:/Users/thale/source/repos/BancoSMEM/obj/Debug/BancoSMEM.MenuCliente.resources
+C:/Users/thale/Desktop/POO/final/BancoSMEM/bin/Debug/BancoSMEM.exe.config
+C:/Users/thale/Desktop/POO/final/BancoSMEM/bin/Debug/BancoSMEM.exe
+C:/Users/thale/Desktop/POO/final/BancoSMEM/bin/Debug/BancoSMEM.pdb
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.csprojAssemblyReference.cache
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.MenuBuscar.resources
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.MenuCliente.resources
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.MenuInicial.resources
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.Properties.Resources.resources
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.csproj.GenerateResource.cache
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.exe
+C:/Users/thale/Desktop/POO/final/BancoSMEM/obj/Debug/BancoSMEM.pdb
+C:/Users/Samsung/Desktop/BancoSMEMqwert/bin/Debug/BancoSMEM.exe.config
+C:/Users/Samsung/Desktop/BancoSMEMqwert/bin/Debug/BancoSMEM.exe
+C:/Users/Samsung/Desktop/BancoSMEMqwert/bin/Debug/BancoSMEM.pdb
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.csprojAssemblyReference.cache
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.MenuCliente.resources
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.MenuInicial.resources
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.Properties.Resources.resources
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.csproj.GenerateResource.cache
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.csproj.CoreCompileInputs.cache
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.exe
+C:/Users/Samsung/Desktop/BancoSMEMqwert/obj/Debug/BancoSMEM.pdb
+/home/charl3ff/Downloads/BancoSMEM (1)/BancoSMEMqwert/obj/Debug/BancoSMEM.exe
+/home/charl3ff/Downloads/BancoSMEM (1)/BancoSMEMqwert/obj/Debug/BancoSMEM.pdb
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\bin\Debug\BancoSMEM.exe.config
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\bin\Debug\BancoSMEM.exe
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\bin\Debug\BancoSMEM.pdb
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.Menu.resources
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.MenuCliente.resources
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.MenuInicial.resources
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.Properties.Resources.resources
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.exe
+C:\Users\thale\Desktop\POO\Banco\BancoSMEMqwert\obj\Debug\BancoSMEM.pdb
+E:\POO\BancoSMEMqwert\bin\Debug\BancoSMEM.exe.config
+E:\POO\BancoSMEMqwert\bin\Debug\BancoSMEM.exe
+E:\POO\BancoSMEMqwert\bin\Debug\BancoSMEM.pdb
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.Menu.resources
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.MenuCliente.resources
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.MenuInicial.resources
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.Properties.Resources.resources
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.exe
+E:\POO\BancoSMEMqwert\obj\Debug\BancoSMEM.pdb
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\bin\Debug\BancoSMEM.exe.config
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\bin\Debug\BancoSMEM.exe
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\bin\Debug\BancoSMEM.pdb
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.Menu.resources
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.Properties.Resources.resources
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.exe
+C:\Users\thale\Desktop\FINAL\BancoSMEMqwert\obj\Debug\BancoSMEM.pdb
+E:\POO\N Aguento mais\BancoSMEMqwert\bin\Debug\BancoSMEM.exe.config
+E:\POO\N Aguento mais\BancoSMEMqwert\bin\Debug\BancoSMEM.exe
+E:\POO\N Aguento mais\BancoSMEMqwert\bin\Debug\BancoSMEM.pdb
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.Menu.resources
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.Properties.Resources.resources
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.exe
+E:\POO\N Aguento mais\BancoSMEMqwert\obj\Debug\BancoSMEM.pdb
+C:\Users\Samsung\Desktop\BancoSMEM\bin\Debug\BancoSMEM.exe.config
+C:\Users\Samsung\Desktop\BancoSMEM\bin\Debug\BancoSMEM.exe
+C:\Users\Samsung\Desktop\BancoSMEM\bin\Debug\BancoSMEM.pdb
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.Menu.resources
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.Properties.Resources.resources
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.exe
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.pdb
+C:\Users\Samsung\Desktop\BancoSMEM\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+D:\Usuários\1216325\Downloads\BancoSMEM\bin\Debug\BancoSMEM.exe.config
+D:\Usuários\1216325\Downloads\BancoSMEM\bin\Debug\BancoSMEM.exe
+D:\Usuários\1216325\Downloads\BancoSMEM\bin\Debug\BancoSMEM.pdb
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.Menu.resources
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.Properties.Resources.resources
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.exe
+D:\Usuários\1216325\Downloads\BancoSMEM\obj\Debug\BancoSMEM.pdb
+C:\Users\Samsung\Desktop\BancoTF\bin\Debug\BancoSMEM.exe.config
+C:\Users\Samsung\Desktop\BancoTF\bin\Debug\BancoSMEM.exe
+C:\Users\Samsung\Desktop\BancoTF\bin\Debug\BancoSMEM.pdb
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.csprojAssemblyReference.cache
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.Menu.resources
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.Properties.Resources.resources
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.csproj.GenerateResource.cache
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.csproj.CoreCompileInputs.cache
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.exe
+C:\Users\Samsung\Desktop\BancoTF\obj\Debug\BancoSMEM.pdb
