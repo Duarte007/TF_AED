@@ -565,7 +565,7 @@
 			this.txtDataFin.Location = new System.Drawing.Point(157, 80);
 			this.txtDataFin.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDataFin.Name = "txtDataFin";
-			this.txtDataFin.ReadOnly = true;
+			this.txtDataFin.ReadOnly = false;
 			this.txtDataFin.Size = new System.Drawing.Size(244, 30);
 			this.txtDataFin.TabIndex = 5;
 			// 
@@ -574,7 +574,7 @@
 			this.txtDataIni.Location = new System.Drawing.Point(157, 37);
 			this.txtDataIni.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDataIni.Name = "txtDataIni";
-			this.txtDataIni.ReadOnly = true;
+			this.txtDataIni.ReadOnly = false;
 			this.txtDataIni.Size = new System.Drawing.Size(244, 30);
 			this.txtDataIni.TabIndex = 4;
 			// 

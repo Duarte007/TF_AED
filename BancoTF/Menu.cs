@@ -16,6 +16,7 @@ namespace BancoSMEM
 		LeitorArquivo leitorArquivo = new LeitorArquivo();
         public bool teste1 = false, teste2 = false, teste3 = false;
         public string dadosCliente, dadosConta, dadosOp;
+        public Conta contaAtual;
         public Menu()
         {
             InitializeComponent();
@@ -88,18 +89,18 @@ namespace BancoSMEM
             try {
                
                 string cpf = txtBuscarcpf.Text;
-
+               
                 Cliente cliente = leitorArquivo.encontraCliente(Convert.ToInt64(cpf));
                 txtClientecpf.Text = cliente.cpf;
                 txtClienteNome.Text = cliente.nome;
                 txtClienteTipo.Text = cliente.GetType().Name;
 
-                 int conta = int.Parse(txtConta.Text);
+                 int numConta = int.Parse(txtConta.Text);
 
-                 Conta contas = leitorArquivo.encontraConta(conta);
-                 txtContaNumero.Text = contas.numero.ToString();
-                 txtContaTipo.Text = contas.categoria.GetType().Name;
-                 txtContaSaldoInicial.Text = contas.saldo.ToString("c");
+                 contaAtual = leitorArquivo.encontraConta(numConta);
+                 txtContaNumero.Text = contaAtual.numero.ToString();
+                 txtContaTipo.Text = contaAtual.categoria.GetType().Name;
+                 txtContaSaldoInicial.Text = contaAtual.saldo.ToString("c");
 
             } catch (ArgumentNullException err) {
                 MessageBox.Show("Digite o CPF para fazer a pesquisa");
@@ -134,11 +135,13 @@ namespace BancoSMEM
 
         }
 
-		private void btnMostrarExtrato_Click(object sender, EventArgs e)
-		{
-			int conta = int.Parse(txtConta.Text);
-			Conta contas = leitorArquivo.encontraConta(conta);
-			txtExtratoExibir.Text = contas.extrato();
+		private void btnMostrarExtrato_Click(object sender, EventArgs e) {
+            string dataIni = txtDataIni.Text;
+            string dataFin = txtDataFin.Text;
+            if(dataFin != "" && dataIni != "")
+			    txtExtratoExibir.Text = contaAtual.extratoByDateInterval(dataIni, dataFin);
+            else
+                txtExtratoExibir.Text = contaAtual.extrato();
 		}
 
 		private void button4_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace BancoSMEM {
 		public string nome { get; set; }
 		public string cpf { get; }
 		public List<Conta> contas { get; set; }
+		public List<Conta> contasOrdenadas { get; set; }
 		public Cliente direita;   
 		public Cliente esquerda;
 
@@ -35,6 +36,22 @@ namespace BancoSMEM {
 			foreach (var conta in contas) aux.Append(conta.extrato());
 
 			return aux.ToString();
+		}
+
+		public void ordenaContas(){
+			List<Conta> contasOrdenadas = contas;
+			int length = contasOrdenadas.Count;
+
+			for(int i = length - 1 ; i >= 1 ; i--){
+				for(int j = 0 ; j < i ; j++){
+					if (contasOrdenadas[j].saldo > contasOrdenadas[j + 1].saldo) {
+						Conta aux = contasOrdenadas[j];
+						contasOrdenadas[j] = contasOrdenadas[j + 1];
+						contasOrdenadas[j + 1] = aux;
+					}
+				}	
+			}
+			this.contasOrdenadas = contasOrdenadas;
 		}
 
 		public virtual double tarifa(int numConta) {
