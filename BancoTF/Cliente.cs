@@ -54,12 +54,12 @@ namespace BancoSMEM {
 			this.contasOrdenadas = contasOrdenadas;
 		}
 
-		public string imprimiOrdenaContas()
-		{
+		public string imprimiContasOrdenadas() {
 			var aux = new StringBuilder();
-			foreach (var dado in contasOrdenadas)
-			{
-				aux.Append(dado);
+			foreach (Conta conta in this.contasOrdenadas) {
+				aux.Append("N. Conta: ").Append(conta.numero.ToString("000"))
+				.Append(" Saldo Final: ").Append(conta.saldoFinal.ToString("c"))
+				.Append(Environment.NewLine);
 			}
 			return aux.ToString();
 		}

@@ -16,8 +16,8 @@ namespace BancoSMEM
 		LeitorArquivo leitorArquivo = new LeitorArquivo();
         public bool teste1 = false, teste2 = false, teste3 = false;
         public string dadosCliente, dadosConta, dadosOp;
-        public Conta contaAtual;
-		public Cliente clienteAtual;
+        public Conta contaAtual = null;
+		public Cliente clienteAtual = null;
         public Menu()
         {
             InitializeComponent();
@@ -92,16 +92,18 @@ namespace BancoSMEM
                
                 string cpf = txtBuscarcpf.Text;
                
-                Cliente cliente = leitorArquivo.encontraCliente(Convert.ToInt64(cpf));
-                txtClientecpf.Text = cliente.cpf;
-                txtClienteNome.Text = cliente.nome;
-                txtClienteTipo.Text = cliente.GetType().Name;
+                clienteAtual = leitorArquivo.encontraCliente(Convert.ToInt64(cpf));
+                txtClientecpf.Text = clienteAtual.cpf;
+                txtClienteNome.Text = clienteAtual.nome;
+                txtClienteTipo.Text = clienteAtual.GetType().Name;
 
-                 int numConta = int.Parse(txtConta.Text);
+                int numConta = int.Parse(txtConta.Text);
 
-                 contaAtual = leitorArquivo.encontraConta(numConta);
-                 txtContaNumero.Text = contaAtual.numero.ToString();
-                 txtContaTipo.Text = contaAtual.categoria.GetType().Name;
+                contaAtual = leitorArquivo.encontraConta(numConta);
+                txtContaNumero.Text = contaAtual.numero.ToString();
+                txtContaTipo.Text = contaAtual.categoria.GetType().Name;
+                
+                contaAtual.execOperacoes();
 				txtContaSaldoInicial.Text = contaAtual.saldoFinal.ToString("c");
 
             } catch (ArgumentNullException err) {
@@ -138,18 +140,25 @@ namespace BancoSMEM
         }
 
 		private void btnMostrarExtrato_Click(object sender, EventArgs e) {
-            string dataIni = txtDataIni.Text;
-            string dataFin = txtDataFin.Text;
-            if(dataFin != "" && dataIni != "")
-			    txtExtratoExibir.Text = contaAtual.extratoByDateInterval(dataIni, dataFin);
-            else
-                txtExtratoExibir.Text = contaAtual.extrato();
+            if(contaAtual!=null){
+                string dataIni = txtDataIni.Text;
+                string dataFin = txtDataFin.Text;
+                if(dataFin != "" && dataIni != "")
+			        txtExtratoExibir.Text = contaAtual.extratoByDateInterval(dataIni, dataFin);
+                else
+                    txtExtratoExibir.Text = contaAtual.extrato();
+            } else {
+                MessageBox.Show("A conta ainda não foi filtrada.");
+            }
 		}
 
-		private void btnMostrarContas_Click(object sender, EventArgs e)
-		{
-			
-			txtContasOrd.Text = clienteAtual.imprimiOrdenaContas();
+		private void btnMostrarContas_Click(object sender, EventArgs e) {
+            if(clienteAtual != null){
+                clienteAtual.ordenaContas();
+			    txtContasOrd.Text = clienteAtual.imprimiContasOrdenadas();
+            }
+            else 
+                MessageBox.Show("O cliente ainda não foi filtrado.");
 		}
 
 		private void button4_Click(object sender, EventArgs e)

@@ -61,11 +61,9 @@ namespace BancoSMEM {
 					if (conta != null && operacao != null){
 						conta.addOperacao(operacao);
 						var el = new Elemento(conta);
-						arvoreConta.inserir(el);
+						// arvoreOp.inserir(el);
 					} 
 				}
-				if(conta != null)
-					conta.execOperacoes();
 			}
 			catch (IOException) {
 				Console.WriteLine("Não foi possível ler as operações:");

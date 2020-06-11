@@ -279,7 +279,7 @@
 			this.btnEncontrar.Name = "btnEncontrar";
 			this.btnEncontrar.Size = new System.Drawing.Size(167, 34);
 			this.btnEncontrar.TabIndex = 1;
-			this.btnEncontrar.Text = "ENCONTRAR";
+			this.btnEncontrar.Text = "ENCONTRAR CLIENTE";
 			this.btnEncontrar.UseVisualStyleBackColor = false;
 			this.btnEncontrar.Click += new System.EventHandler(this.button7_Click);
 			// 

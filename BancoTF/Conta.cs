@@ -49,18 +49,8 @@ namespace BancoSMEM {
 		}
 
 		public string extratoByDateInterval(string dataIni, string dataFin) {
-            String[] splitDtIni = dataIni.Split('/');
-            String[] splitDtFin = dataFin.Split('/');
-            DateTime dataInicial = new DateTime (
-				int.Parse(splitDtIni[2]), 
-				int.Parse(splitDtIni[1]), 
-				int.Parse(splitDtIni[0])
-			);
-            DateTime dataFinal = new DateTime (
-				int.Parse(splitDtFin[2]), 
-				int.Parse(splitDtFin[1]), 
-				int.Parse(splitDtFin[0])
-			);
+            DateTime dataInicial = DateTime.Parse(dataIni);
+            DateTime dataFinal = DateTime.Parse(dataFin);
 			var aux = new StringBuilder();
             aux.Append("Número: ").Append(numero.ToString("000"))
                 .Append(Environment.NewLine)
