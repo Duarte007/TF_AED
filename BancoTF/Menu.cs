@@ -17,6 +17,7 @@ namespace BancoSMEM
         public bool teste1 = false, teste2 = false, teste3 = false;
         public string dadosCliente, dadosConta, dadosOp;
         public Conta contaAtual;
+		public Cliente clienteAtual;
         public Menu()
         {
             InitializeComponent();
@@ -77,6 +78,7 @@ namespace BancoSMEM
             gbxContas.Visible = true;
             groupExtrato.Visible = true;
 			grpOperacao.Visible = true;
+			grpTodasContas.Visible = true;
 
 		}
 
@@ -100,7 +102,7 @@ namespace BancoSMEM
                  contaAtual = leitorArquivo.encontraConta(numConta);
                  txtContaNumero.Text = contaAtual.numero.ToString();
                  txtContaTipo.Text = contaAtual.categoria.GetType().Name;
-                 txtContaSaldoInicial.Text = contaAtual.saldo.ToString("c");
+				txtContaSaldoInicial.Text = contaAtual.saldoFinal.ToString("c");
 
             } catch (ArgumentNullException err) {
                 MessageBox.Show("Digite o CPF para fazer a pesquisa");
@@ -142,6 +144,12 @@ namespace BancoSMEM
 			    txtExtratoExibir.Text = contaAtual.extratoByDateInterval(dataIni, dataFin);
             else
                 txtExtratoExibir.Text = contaAtual.extrato();
+		}
+
+		private void btnMostrarContas_Click(object sender, EventArgs e)
+		{
+			
+			txtContasOrd.Text = clienteAtual.imprimiOrdenaContas();
 		}
 
 		private void button4_Click(object sender, EventArgs e)

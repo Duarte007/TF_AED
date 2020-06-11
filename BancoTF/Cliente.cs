@@ -54,6 +54,16 @@ namespace BancoSMEM {
 			this.contasOrdenadas = contasOrdenadas;
 		}
 
+		public string imprimiOrdenaContas()
+		{
+			var aux = new StringBuilder();
+			foreach (var dado in contasOrdenadas)
+			{
+				aux.Append(dado);
+			}
+			return aux.ToString();
+		}
+
 		public virtual double tarifa(int numConta) {
 			Conta minhaConta = contas.Find(x => x.numero == numConta);
 			foreach (var conta in contas)

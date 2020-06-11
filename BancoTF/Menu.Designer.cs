@@ -72,6 +72,9 @@
 			this.groupExtrato = new System.Windows.Forms.GroupBox();
 			this.txtExtratoExibir = new System.Windows.Forms.RichTextBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+			this.btnMostrarContas = new System.Windows.Forms.Button();
+			this.grpTodasContas = new System.Windows.Forms.GroupBox();
+			this.txtContasOrd = new System.Windows.Forms.RichTextBox();
 			this.pnlMenu.SuspendLayout();
 			this.gbxBuscar.SuspendLayout();
 			this.gbxCliente.SuspendLayout();
@@ -80,6 +83,7 @@
 			this.panel3.SuspendLayout();
 			this.grpOperacao.SuspendLayout();
 			this.groupExtrato.SuspendLayout();
+			this.grpTodasContas.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlMenu
@@ -92,7 +96,7 @@
 			this.pnlMenu.Location = new System.Drawing.Point(-1, -1);
 			this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlMenu.Name = "pnlMenu";
-			this.pnlMenu.Size = new System.Drawing.Size(240, 631);
+			this.pnlMenu.Size = new System.Drawing.Size(240, 811);
 			this.pnlMenu.TabIndex = 0;
 			// 
 			// button1
@@ -195,6 +199,7 @@
 			// 
 			// gbxBuscar
 			// 
+			this.gbxBuscar.Controls.Add(this.btnMostrarContas);
 			this.gbxBuscar.Controls.Add(this.btnMostrarExtrato);
 			this.gbxBuscar.Controls.Add(this.button2);
 			this.gbxBuscar.Controls.Add(this.lblConta);
@@ -216,7 +221,7 @@
 			// btnMostrarExtrato
 			// 
 			this.btnMostrarExtrato.BackColor = System.Drawing.Color.DarkTurquoise;
-			this.btnMostrarExtrato.Location = new System.Drawing.Point(779, 21);
+			this.btnMostrarExtrato.Location = new System.Drawing.Point(685, 21);
 			this.btnMostrarExtrato.Margin = new System.Windows.Forms.Padding(4);
 			this.btnMostrarExtrato.Name = "btnMostrarExtrato";
 			this.btnMostrarExtrato.Size = new System.Drawing.Size(167, 34);
@@ -228,10 +233,10 @@
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.Coral;
-			this.button2.Location = new System.Drawing.Point(882, 60);
+			this.button2.Location = new System.Drawing.Point(861, 60);
 			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(167, 34);
+			this.button2.Size = new System.Drawing.Size(212, 34);
 			this.button2.TabIndex = 6;
 			this.button2.Text = "LIMPAR";
 			this.button2.UseVisualStyleBackColor = false;
@@ -373,7 +378,7 @@
 			this.gbxArquivos.Controls.Add(this.lblBuscarOperacoes);
 			this.gbxArquivos.Controls.Add(this.lblBuscarCliente);
 			this.gbxArquivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.gbxArquivos.Location = new System.Drawing.Point(301, 154);
+			this.gbxArquivos.Location = new System.Drawing.Point(301, 255);
 			this.gbxArquivos.Margin = new System.Windows.Forms.Padding(4);
 			this.gbxArquivos.Name = "gbxArquivos";
 			this.gbxArquivos.Padding = new System.Windows.Forms.Padding(4);
@@ -485,9 +490,9 @@
 			this.lblSaldo.Location = new System.Drawing.Point(8, 133);
 			this.lblSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblSaldo.Name = "lblSaldo";
-			this.lblSaldo.Size = new System.Drawing.Size(159, 24);
+			this.lblSaldo.Size = new System.Drawing.Size(147, 24);
 			this.lblSaldo.TabIndex = 7;
-			this.lblSaldo.Text = "SALDO INICIAL:";
+			this.lblSaldo.Text = "SALDO FINAL:";
 			// 
 			// txtContaTipo
 			// 
@@ -530,6 +535,7 @@
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.panel3.Controls.Add(this.grpTodasContas);
 			this.panel3.Controls.Add(this.grpOperacao);
 			this.panel3.Controls.Add(this.gbxArquivos);
 			this.panel3.Controls.Add(this.groupExtrato);
@@ -539,7 +545,7 @@
 			this.panel3.Location = new System.Drawing.Point(235, -1);
 			this.panel3.Margin = new System.Windows.Forms.Padding(4);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(1111, 645);
+			this.panel3.Size = new System.Drawing.Size(1125, 788);
 			this.panel3.TabIndex = 5;
 			// 
 			// grpOperacao
@@ -565,7 +571,6 @@
 			this.txtDataFin.Location = new System.Drawing.Point(157, 80);
 			this.txtDataFin.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDataFin.Name = "txtDataFin";
-			this.txtDataFin.ReadOnly = false;
 			this.txtDataFin.Size = new System.Drawing.Size(244, 30);
 			this.txtDataFin.TabIndex = 5;
 			// 
@@ -574,7 +579,6 @@
 			this.txtDataIni.Location = new System.Drawing.Point(157, 37);
 			this.txtDataIni.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDataIni.Name = "txtDataIni";
-			this.txtDataIni.ReadOnly = false;
 			this.txtDataIni.Size = new System.Drawing.Size(244, 30);
 			this.txtDataIni.TabIndex = 4;
 			// 
@@ -628,11 +632,48 @@
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
+			// btnMostrarContas
+			// 
+			this.btnMostrarContas.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnMostrarContas.Location = new System.Drawing.Point(861, 22);
+			this.btnMostrarContas.Margin = new System.Windows.Forms.Padding(4);
+			this.btnMostrarContas.Name = "btnMostrarContas";
+			this.btnMostrarContas.Size = new System.Drawing.Size(213, 34);
+			this.btnMostrarContas.TabIndex = 8;
+			this.btnMostrarContas.Text = "MOSTRAR CONTAS";
+			this.btnMostrarContas.UseVisualStyleBackColor = false;
+			this.btnMostrarContas.Click += new System.EventHandler(this.btnMostrarContas_Click);
+			// 
+			// grpTodasContas
+			// 
+			this.grpTodasContas.Controls.Add(this.txtContasOrd);
+			this.grpTodasContas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.grpTodasContas.ForeColor = System.Drawing.SystemColors.Window;
+			this.grpTodasContas.Location = new System.Drawing.Point(12, 612);
+			this.grpTodasContas.Margin = new System.Windows.Forms.Padding(4);
+			this.grpTodasContas.Name = "grpTodasContas";
+			this.grpTodasContas.Padding = new System.Windows.Forms.Padding(4);
+			this.grpTodasContas.Size = new System.Drawing.Size(1082, 144);
+			this.grpTodasContas.TabIndex = 10;
+			this.grpTodasContas.TabStop = false;
+			this.grpTodasContas.Text = "TODAS AS CONTAS";
+			this.grpTodasContas.Visible = false;
+			// 
+			// txtContasOrd
+			// 
+			this.txtContasOrd.Location = new System.Drawing.Point(10, 27);
+			this.txtContasOrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtContasOrd.Name = "txtContasOrd";
+			this.txtContasOrd.ReadOnly = true;
+			this.txtContasOrd.Size = new System.Drawing.Size(1064, 108);
+			this.txtContasOrd.TabIndex = 4;
+			this.txtContasOrd.Text = "";
+			// 
 			// Menu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1344, 629);
+			this.ClientSize = new System.Drawing.Size(1357, 765);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.pnlMenu);
@@ -654,6 +695,7 @@
 			this.grpOperacao.ResumeLayout(false);
 			this.grpOperacao.PerformLayout();
 			this.groupExtrato.ResumeLayout(false);
+			this.grpTodasContas.ResumeLayout(false);
 			this.ResumeLayout(false);
 
         }
@@ -704,5 +746,8 @@
 		private System.Windows.Forms.TextBox txtDataIni;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Button btnMostrarContas;
+		private System.Windows.Forms.GroupBox grpTodasContas;
+		private System.Windows.Forms.RichTextBox txtContasOrd;
 	}
 }
