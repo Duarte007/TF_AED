@@ -42,6 +42,7 @@ namespace BancoSMEM {
 				var linhas = File.ReadAllLines(path2);
 				DateTime data;
 				double valor;
+				Conta conta = null;
 				int tipo, dia, mes, ano, codOp, numConta;
 				string[] datas;
 				string[] dados;
@@ -56,13 +57,15 @@ namespace BancoSMEM {
 					ano = int.Parse(datas[2]);
 					data = new DateTime(ano, mes, dia);
 					var operacao = decodificaOp(valor, data, numConta, codOp);
-					var conta = encontraConta(numConta);
+					conta = encontraConta(numConta);
 					if (conta != null && operacao != null){
 						conta.addOperacao(operacao);
 						var el = new Elemento(conta);
 						arvoreConta.inserir(el);
 					} 
 				}
+				if(conta != null)
+					conta.execOperacoes();
 			}
 			catch (IOException) {
 				Console.WriteLine("Não foi possível ler as operações:");

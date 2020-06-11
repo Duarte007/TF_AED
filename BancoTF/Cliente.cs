@@ -44,7 +44,7 @@ namespace BancoSMEM {
 
 			for(int i = length - 1 ; i >= 1 ; i--){
 				for(int j = 0 ; j < i ; j++){
-					if (contasOrdenadas[j].saldo > contasOrdenadas[j + 1].saldo) {
+					if (contasOrdenadas[j].saldoFinal > contasOrdenadas[j + 1].saldoFinal) {
 						Conta aux = contasOrdenadas[j];
 						contasOrdenadas[j] = contasOrdenadas[j + 1];
 						contasOrdenadas[j + 1] = aux;
