@@ -42,6 +42,10 @@ namespace BancoSMEM {
 			List<Conta> contasOrdenadas = contas;
 			int length = contasOrdenadas.Count;
 
+			for(int j = 0 ; j < length ; j++){
+				contasOrdenadas[j].execOperacoes();
+			}
+			
 			for(int i = length - 1 ; i >= 1 ; i--){
 				for(int j = 0 ; j < i ; j++){
 					if (contasOrdenadas[j].saldoFinal > contasOrdenadas[j + 1].saldoFinal) {
